@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+    <title>Trust Ur Tastebudz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="script" href="script.js">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="/Contact/Logo.svg" alt="Logo" class="ttb">
+        </div>
+    
+        <ul>
+            <li class="active">Home</li>
+            <li><a href="\Menu\index.html">Menu</a></li>
+            <li><a href="\Contact\index.html">Contact</a></li>
+        </ul>
+        <div class="order">
+            
+            <img src="/Menu/food-donation.svg" alt="" onclick="openNav()" >
+        
+            <div class="nav">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="top">
+            <img src="/Contact/Logo.svg" alt="Main logo">
+            <div class="container">
+                <h3>TRUST<br>UR <br> <span>TASTEBUDZ</span></h3>
+                <p>Serving delectable Vegan food your Tastebudz can't lie about. You wont believe this food is Vegan but your stomach will agree. Trust me and Trust Ur Tastebudz</p>
+                <a href="\Menu\index.html">View Menu</a>
+            </div>
+        </section>
+        <section class="mid">
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                  <img src="IMG_12801.jpg"">
+                </div>
+              
+                <div class="mySlides fade">
+                    <img src="IMG_25281.jpg">
+                </div>
+                <div class="mySlides fade">
+                    <img src="IMG_34131.jpg">
+                </div>
+                <div class="mySlides fade">
+                    <img src="IMG_38051.jpg">
+                </div>
+                <div class="mySlides fade">
+                    <img src="IMG_38141.jpg">
+                </div>
+                <div class="mySlides fade">
+                    <img src="IMG_38231.jpg">
+                </div>
+                <div class="mySlides fade">
+                    <img src="IMG_38431.jpg">
+                </div>
+                <div class="mySlides fade">
+                    <img src="IMG_38721.jpg">
+                </div>
+              
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
+        </section>
+        <section class="btm">
+            <h3>Today's Menu: <span>5/15/2020</span></h3>
+              
+            <img src="Artboard 1-100.jpg" alt="Today's menu">    
+        </section>
+    </main>
+    <div class="to-top">
+        <a href=""><img src="PinClipart.com_i-love-math-clipart_848449.png" alt="" max-width="100%"></a>
+    </div>
+    
+    <div class="foot">
+        <a href="https://www.instagram.com/trusturtastebudz/"><img src="iconfinder_1_Instagram_colored_svg_1_5296765.png" alt=""></a>
+        <a href="https://www.facebook.com/Trust-Ur-Tastebudz-303299250356275"><img src="iconfinder_1_Facebook_colored_svg_copy_5296499.png" alt=""></a>
+    </div>
+
+    <script>
+    const toTop = document.querySelector(".to-top")
+    
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 100){
+            toTop.classList.add('active')
+        } else {
+            toTop.classList.remove('active')
+        }
+    })
+
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 3000); // Change image every 2 seconds
+    }
+
+        $(document).ready(function() {
+            $(".nav").click(function() {
+                $("ul").toggle();
+            });
+        });
+
+    </script>
+</body>
+</html>
